@@ -1,0 +1,3 @@
+O software deve ser capaz de gerenciar um grupo de bolsistas do departamento. Dados como projeto, data de entrada e saída do projeto, nome do orientador, horário de trabalho sugerido e efetivamente cumprido, tarefas desenvolvidas (descrição, tempo para desenvolver....), local de trabalho deve ser armazenados. 
+O sistema deve gerenciar a mudança de projetos de um determinado aluno e este histórico deve ser mantido.
+Dado um grupo de alunos, o sistema deve ser capaz de gerenciar o horário de aulas e o horário de trabalho para que não haja sobreposição.
