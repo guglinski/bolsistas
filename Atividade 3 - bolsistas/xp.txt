@@ -44,7 +44,7 @@ Práticas:
 -Refatoração (Refactoring)
 -Integração Contínua (Continuous Integration)
 
-JUSTIFICATIVA.
+JUSTIFICATIVA
 
 #################################################
 Descrever as etapas principais do desenvolvimento de acordo com o paradigma escolhido.
@@ -68,17 +68,40 @@ Definição da plataforma;
 Definição da linguagem e outras ferramentas de desenvolvimento;
 
 - Planejamento inicial:
+Identificação dos módulos do sistema;
+Classificação dos módulos de acordo com a sua importância;
 Sorteio prévio dos pares de desenvolvimento;
 
-- Iterações do release:
+- Iterações de cada release:
+escrita dos casos de testes;
+projeto e refatoramento;
+codificação;
+realização dos testes;
+integração;
 
 - Produção:
+Teste em laboratório;
+Teste com o usuário final; (opcional)
 
 - Manutenção:
+Corretiva;
+Refatoramento;
+Introdução de novas tecnologias;
+Introdução de novas idéias de arquitetura;
+Considerações: Cautela.
 
 - Morte:
-
+Duas razões para a morte do projeto:
+- Boa
+- Ruim
 
 #################################################
 Elaborar o cronograma com alguma ferramenta CASE que permita fazer o detalhamento do cronograma (ex: MSProject ou Openproj).
 #################################################
+
+Manutenção de bolsistas;
+Manutenção de projetos;
+Manutenção de tarefas;
+Login-logout
+Layout
+Estatísticas
