@@ -1,0 +1,84 @@
+#################################################
+Descrever o paradigma de desenvolvimento a ser utilizado, justificando a sua escolha. 
+#################################################
+
+Pequenas e médias equipes;
+
+Várias pequenas mudanças e ajustes;
+
+Os cinco valores fundamentais da metodologia XP são: 
+- comunicação;
+- simplicidade;
+- feedback;
+- coragem;
+- respeito;
+
+princípios básicos: 
+- feedback rápido;
+- presumir simplicidade;
+- mudanças incrementais;
+- abraçar mudanças;
+- trabalho de qualidade;
+
+Priorização de funcionalidades com maior valor para o negócio;
+
+Atividades metodológicas:
+- Planejamento
+- Projeto ("Designing")
+- Codificação
+- Testes
+
+Práticas:
+-Jogo de Planejamento (Planning Game)
+-Fases pequenas (Small Releases)
+-Metáfora (Metaphor)
+-Design Simples (Simple Design)
+-Time Coeso (Whole Team)
+-Testes de Aceitação (Customer Tests)
+-Semana de 40 horas (Sustainable Pace)
+-Reuniões em pé (Stand-up Meeting)
+-Propriedade Coletiva (Collective Ownership)
+-Programação Pareada (Pair Programming)
+-Padronização do Codigo (Coding Standards)
+-Desenvolvimento Orientado a Testes (Test Driven Development)
+-Refatoração (Refactoring)
+-Integração Contínua (Continuous Integration)
+
+JUSTIFICATIVA.
+
+#################################################
+Descrever as etapas principais do desenvolvimento de acordo com o paradigma escolhido.
+e
+Acrescentar os recursos humanos, de hardware e de software em cada etapa.
+e
+Acrescentar os documentos a serem gerados em cada etapa (ex, documentos de requisitos);
+#################################################
+
+Um projeto XP passa pelas seguintes fases:
+- Exploração:
+- Planejamento inicial:
+- Iterações do release:
+- Produção:
+- Manutenção:
+- Morte:
+
+- Exploração:
+Solução escolhida;
+Definição da plataforma;
+Definição da linguagem e outras ferramentas de desenvolvimento;
+
+- Planejamento inicial:
+Sorteio prévio dos pares de desenvolvimento;
+
+- Iterações do release:
+
+- Produção:
+
+- Manutenção:
+
+- Morte:
+
+
+#################################################
+Elaborar o cronograma com alguma ferramenta CASE que permita fazer o detalhamento do cronograma (ex: MSProject ou Openproj).
+#################################################
