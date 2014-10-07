@@ -13,5 +13,8 @@ and open the template in the editor.
         <?php
         // put your code here
         ?>
+        teste
+        teste
+        teste Dimitri
     </body>
 </html>
