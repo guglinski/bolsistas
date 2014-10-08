@@ -1,10 +1,136 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : 07/10/2014, 14:55:28
-    Author     : Victor
-*/
+html, body, div, span, applet, object, iframe, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
+abbr, acronym, address, big, cite, code, del, 
+dfn, em, font, img, ins, kbd, q, s, samp, small, 
+strike, strong, sub, sup, tt, var, b, u, i, 
+center, dl, dt, dd, ol, ul, li, fieldset, form, 
+label, legend, table, caption, tbody, tfoot, 
+thead, tr, th, td {
+    margin: 0px;
+    padding: 0px;
+    border: 0px none;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: none repeat scroll 0% 0% transparent;
+}
 
+div {
+    display: block;
+    background-size: 100% 100%;
+    text-align: justify;
+}
+
+p {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+body {
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 13px;
+    color: #404040;
+    background-color: #f1f1f1;
+    margin: 0px;
+    height: 100%;
+    line-height: 17px;
+}
+
+#topo {
+    width: 1000px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #eefffe;
+}
+
+#logo {
+    
+}
+
+#search {
+    
+}
+
+#menu {
+    height: 30px;
+    word-spacing: 12px;
+    background-color: #d3d3d3;
+    margin-bottom: 5px;
+}
+
+#menuNav {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.linkMenu {
+    position: relative;
+    float: left;
+    padding-top: 7px; padding-bottom: 7px;
+    vertical-align: 50%;
+    margin-right: 20px;
+}
+
+#bigBox {
+    width: 1000px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f1f1f1;
+    
+}
+
+#content {
+    width: 77%;
+    height: 280px;
+    background-color: #404040;
+    clear: none;
+    float: left;
+    padding: 10px;
+}
+
+#login {
+    position: relative;
+    float: right;
+    width: 17%;
+    height: 280px;
+    background-color: #404040;
+    color: red;
+    padding: 10px;
+}
+
+#footer{
+    width: 1000px;
+    height: 25px;
+    word-spacing: 12px;
+    background-color: #d3d3d3;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
+#line{
+    height: 5px;
+    word-spacing: 12px;
+    background-color: black;
+}
+
+a {
+    cursor: auto;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #555555;
+}
+
+a:hover, a:active {
+    color: #ff4800;
+}
+
+a.topnavdir {
+    float: right;
+    margin-left: 10px;
+    margin-right: 6px;
+}
