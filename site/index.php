@@ -27,11 +27,16 @@
             </div>
             <div id="login">
                 <form name="login" action="login.php" method="POST" enctype="multipart/form-data">
-                    Login:<br><input type="text" name="login" value="" />
-                    Senha:<input type="text" name="password" value="" />
-                    <input type="submit" value="Entrar" name="entrar" />
+                    Login:<br><input type="text" name="login" value="" class="item" />
+                    <div class="invisibleSeparator"></div>
+                    Senha:<input type="text" name="password" value="" class="item" />
+                    <div class="invisibleSeparator"></div>
+                    <input type="submit" value="Entrar" name="entrar" class="smallRightItem" />
                 </form>
-                
+                <div class="clear"></div>
+                <div class="invisibleSeparator"></div>
+                <div class="right">Cadastro<br></div>
+                <div class="right">Esqueceu sua senha?</div>
             </div>
         </div>
         <div id="line">
