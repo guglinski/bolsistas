@@ -16,28 +16,15 @@
         </div>
         <div id="menu">
             <div id="menuNav">
-                <div class="linkMenu"><a href="./index.php?page=home">Home</a></div>
-                <div class="linkMenu"><a href="./bolsistas.php?page=bolsistas">Bolsista</a></div>
+                <div class="linkMenu"><a href="./index.php">Home</a></div>
+                <div class="linkMenu"><a href="./bolsistas.php">Bolsista</a></div>
                 <div class="linkMenu"><a href="./projetos.php">Projeto</a></div>
                 <div class="linkMenu"><a href="./contato.php">Contato</a></div>
             </div>
         </div>
         <div id="bigBox">
             <div id="content">
-                <?php
-                    $page = filter_input(INPUT_GET, "page");
-                    
-                    if ($page == "" || $page == "home") {
-                    include "./index.php";
-                    } else if ($page == "bolsitas") {
-                        include "./bolsistas.php";
-                    } else if ($page == "projetos") {
-                        include "./projetos.php";
-                    } else if ($page == "contato") {
-                        include "./contato.php";
-                    } else if ($page == "esqueceuSenha") {
-                        include "./esqueceuSenha.php";            
-                ?>
+                
             </div>
             <div id="login">
                 <form name="login" action="login.php" method="POST" enctype="multipart/form-data">
