@@ -8,7 +8,7 @@
     <body>
         <div id="topo">
             <div id="logo">
-                Trainee Manager
+                <a href="index.php"><img id="banner" src="banner.png"></a>
             </div>
             <div id="search">
                 
@@ -16,6 +16,7 @@
         </div>
         <div id="menu">
             <div id="menuNav">
+                <div class="linkMenu"><a href="./index.php">Home</a></div>
                 <div class="linkMenu"><a href="#">Bolsista</a></div>
                 <div class="linkMenu"><a href="#">Projeto</a></div>
                 <div class="linkMenu"><a href="#">Contato</a></div>
