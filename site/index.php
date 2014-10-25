@@ -28,7 +28,7 @@
             <div id="login">
                 <form name="login" action="login.php" method="POST" enctype="multipart/form-data">
                     Login:<br><input type="text" name="login" value="" />
-                    Senha:<input type="text" name="password" value="" />
+                    Senha:<input type="password" name="password" value="" />
                     <input type="submit" value="Entrar" name="entrar" />
                 </form>
                 
