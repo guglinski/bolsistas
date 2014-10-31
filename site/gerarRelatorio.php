@@ -1,4 +1,5 @@
-<?php
+﻿<?php		
+		define ('FPDF_FONTPATH', '/'); // segundo é o diretorio das fontes
                 require_once 'fpdf.php';
 
 
@@ -23,6 +24,7 @@ $conn = new mysqli($host, $user, $password, $database);
 
 //Criando PDF
 $pdf = new FPDF();
+$pdf - Open();
 $pdf->AddPage('P', 'A4');
 
 // Estilizando PDF
