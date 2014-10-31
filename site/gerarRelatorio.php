@@ -1,6 +1,6 @@
 <?php		
-		define ('FPDF_FONTPATH', '/'); // segundo é o diretorio das fontes
-                require_once 'fpdf.php';
+		define ('FPDF_FONTPATH', 'font/'); // segundo é o diretorio das fontes
+                require('fpdf.php');
 
 
                 $host = "localhost";

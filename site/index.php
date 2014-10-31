@@ -45,7 +45,7 @@
 		    }else if($page == "alterarDadosBolsista"){
                         include "./alterarDadosBolsista.php";    
                     }else if($page == "gerarRelatorio") {
-                        include "./page=gerarRelatorio.php";
+                        include "./gerarRelatorio.php";
                     }
                 ?>
             </div>
