@@ -27,9 +27,6 @@
                 <?php
                     $page = filter_input(INPUT_GET, "page");
                     
-                    if($page == NULL){
-                        
-                    }else
                     if ($page == "" || $page == "home") {
                     	//include "./index.php";
                     } else if ($page == "bolsitas") {
@@ -43,9 +40,11 @@
 		    }else if($page == "cadastroBolsista"){
                         include "./cadastro.php";    
 		    }else if($page == "alterarDadosBolsista"){
-                        include "./alterarDadosBolsista.php";    
-                    }else if($page == "gerarRelatorio") {
-                        include "./gerarRelatorio.php";
+                        include "alterarDadosBolsista.php";    
+                    }else if($page == "editarBolsista"){
+                        include "editarBolsista.php";
+                    }else if($page == "deletarBolsista"){
+                        include "";
                     }
                 ?>
             </div>
@@ -60,9 +59,7 @@
                 <div class="clear"></div>
                 <div class="invisibleSeparator"></div>
                 <div class="right"><a href="?page=cadastroBolsista">Cadastro<br></a></div>
-                <div class="right"><a href="?page=gerarRelatorio">Gerar Relatório<br></a></div>
                 <div class="right"><a href="?page=alterarDadosBolsista">Alterar Dados<br></a></div>
-<!--                <div class="right"><a href="./esqueceuSenha.php">Esqueceu sua senha?</a></div>-->
             </div>
         </div>
         <div id="line">

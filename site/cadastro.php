@@ -1,4 +1,4 @@
-           
+            <div>
                 <form name="cadastroBolsista" action="<?php $_SERVER['PHP_SELF']; ?>" method="get">
                     <table>
                         <tr>
@@ -35,6 +35,7 @@
                     
                     if ((isset($nomeBolsista) && ($nomeBolsista != "")) && (isset($salarioBolsista) && $salarioBolsista != "")
                             && (isset($telefoneBolsista) && $telefoneBolsista != "")  && (isset($emailBolsista) && $emailBolsista != "")) {
+                        
                         $sql = "INSERT INTO bolsista (nome, salario, email, telefone) VALUES ('$nomeBolsista','$salarioBolsista','$emailBolsista','$telefoneBolsista')";
                         
                         $conn = new mysqli($host, $user, $password, $database);
@@ -53,4 +54,4 @@
                         $conn->close();                        
                     }
                ?>  
-            
+            </div>
