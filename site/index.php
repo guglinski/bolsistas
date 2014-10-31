@@ -16,10 +16,10 @@
         </div>
         <div id="menu">
             <div id="menuNav">
-                <div class="linkMenu"><a href="./index.php?page=home">Home</a></div>
-                <div class="linkMenu"><a href="./bolsistas.php?page=bolsistas">Bolsista</a></div>
-                <div class="linkMenu"><a href="./projetos.php">Projeto</a></div>
-                <div class="linkMenu"><a href="./contato.php">Contato</a></div>
+                <div class="linkMenu"><a href="?page=home">Home</a></div>
+                <div class="linkMenu"><a href="?page=bolsistas">Bolsista</a></div>
+                <div class="linkMenu"><a href="?page=projetos">Projeto</a></div>
+                <div class="linkMenu"><a href="?page=contato">Contato</a></div>
             </div>
         </div>
         <div id="bigBox">
@@ -27,8 +27,11 @@
                 <?php
                     $page = filter_input(INPUT_GET, "page");
                     
+                    if($page == NULL){
+                        
+                    }else
                     if ($page == "" || $page == "home") {
-                    include "./index.php";
+                    	include "./index.php";
                     } else if ($page == "bolsitas") {
                         include "./bolsistas.php";
                     } else if ($page == "projetos") {
@@ -36,7 +39,12 @@
                     } else if ($page == "contato") {
                         include "./contato.php";
                     } else if ($page == "esqueceuSenha") {
-                        include "./esqueceuSenha.php";            
+                        include "./esqueceuSenha.php";    
+		    }else if($page == "cadastroBolsista"){
+                        include "./cadastro.php";    
+		    }else if($page == "alterarDadosBolsista"){
+                        include "./alterarDadosBolsista.php";    
+                    }
                 ?>
             </div>
             <div id="login">
@@ -49,8 +57,9 @@
                 </form>
                 <div class="clear"></div>
                 <div class="invisibleSeparator"></div>
-                <div class="right"><a href="./cadastro.php">Cadastro<br></a></div>
-                <div class="right"><a href="./esqueceuSenha.php">Esqueceu sua senha?</a></div>
+                <div class="right"><a href="?page=cadastroBolsista">Cadastro<br></a></div>
+                <div class="right"><a href="?page=alterarDadosBolsista">Alterar Dados<br></a></div>
+<!--                <div class="right"><a href="./esqueceuSenha.php">Esqueceu sua senha?</a></div>-->
             </div>
         </div>
         <div id="line">
