@@ -44,6 +44,8 @@
                         include "./cadastro.php";    
 		    }else if($page == "alterarDadosBolsista"){
                         include "./alterarDadosBolsista.php";    
+                    }else if($page == "gerarRelatorio") {
+                        include "./page=gerarRelatorio.php";
                     }
                 ?>
             </div>
@@ -58,6 +60,7 @@
                 <div class="clear"></div>
                 <div class="invisibleSeparator"></div>
                 <div class="right"><a href="?page=cadastroBolsista">Cadastro<br></a></div>
+                <div class="right"><a href="?page=gerarRelatorio">Gerar Relatório<br></a></div>
                 <div class="right"><a href="?page=alterarDadosBolsista">Alterar Dados<br></a></div>
 <!--                <div class="right"><a href="./esqueceuSenha.php">Esqueceu sua senha?</a></div>-->
             </div>
