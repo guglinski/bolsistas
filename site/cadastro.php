@@ -1,4 +1,4 @@
-            <div id="content">
+           
                 <form name="cadastroBolsista" action="<?php $_SERVER['PHP_SELF']; ?>" method="get">
                     <table>
                         <tr>
@@ -53,4 +53,4 @@
                         $conn->close();                        
                     }
                ?>  
-            </div>
+            
