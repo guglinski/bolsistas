@@ -1,4 +1,4 @@
-﻿<?php		
+<?php		
 		define ('FPDF_FONTPATH', '/'); // segundo é o diretorio das fontes
                 require_once 'fpdf.php';
 
@@ -9,15 +9,15 @@
                 $database = "mydb";
 
                 
- $sql = "SELECT * FROM bolsista
+ $sql = "SELECT * FROM bolsista";
      
      
 $conn = new mysqli($host, $user, $password, $database);
     
 // Check connection
-//                    if ($conn->connect_error) {
-//                        die("Connection failed: " . $conn->connect_error);
-//                    }
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
 
                     $result = $conn->query($sql);
 
