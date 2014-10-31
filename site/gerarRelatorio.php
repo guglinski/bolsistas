@@ -24,7 +24,7 @@ $conn = new mysqli($host, $user, $password, $database);
 
 //Criando PDF
 $pdf = new FPDF();
-$pdf - Open();
+$pdf->Open();
 $pdf->AddPage('P', 'A4');
 
 // Estilizando PDF
@@ -51,7 +51,7 @@ while ($row = $result->fetch_assoc()) {
 
 }
 //Fazer DL forçado
-$pdf->Output('pessoas.pdf', 'D');
+$pdf->Output('teste.pdf', 'D');
 
 
 $conn->close();
