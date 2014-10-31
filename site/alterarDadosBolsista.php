@@ -13,7 +13,7 @@
     <?php
                 $nomeBolsista = filter_input(INPUT_GET, 'nomeBolsista');
 
-                $host = "localhost/bolsita";
+                $host = "localhost";
                 $user = "root";
                 $password = "";
                 $database = "mydb";

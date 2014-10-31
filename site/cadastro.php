@@ -28,17 +28,14 @@
                     $emailBolsista = filter_input(INPUT_GET, 'emailBolsista');
                     $telefoneBolsista = filter_input(INPUT_GET, 'telefoneBolsista');
                     
-                    $host = "localhost/bolsita";
+                    $host = "localhost";
                     $user = "root";
                     $password = "";
                     $database = "mydb";
                     
-                    
-                    if ( (isset($nomeBolsista) && ($nomeBolsista != "")) && (isset($salarioBolsista) && $salarioBolsista != "")
+                    if ((isset($nomeBolsista) && ($nomeBolsista != "")) && (isset($salarioBolsista) && $salarioBolsista != "")
                             && (isset($telefoneBolsista) && $telefoneBolsista != "")  && (isset($emailBolsista) && $emailBolsista != "")) {
                         $sql = "INSERT INTO bolsista (nome, salario, email, telefone) VALUES ('$nomeBolsista','$salarioBolsista','$emailBolsista','$telefoneBolsista')";
-                        
-                        echo "<script>alert('Entrou');</script>";
                         
                         $conn = new mysqli($host, $user, $password, $database);
                         

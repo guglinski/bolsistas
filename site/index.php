@@ -31,7 +31,7 @@
                         
                     }else
                     if ($page == "" || $page == "home") {
-                    	//include "./index.php";
+                    	include "./index.php";
                     } else if ($page == "bolsitas") {
                         include "./bolsistas.php";
                     } else if ($page == "projetos") {
