@@ -28,7 +28,7 @@
                     $emailBolsista = filter_input(INPUT_GET, 'emailBolsista');
                     $telefoneBolsista = filter_input(INPUT_GET, 'telefoneBolsista');
                     
-                    $host = "localhost:3306";
+                    $host = "localhost";
                     $user = "root";
                     $password = "";
                     $database = "mydb";
