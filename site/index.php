@@ -8,7 +8,7 @@
     <body>
         <div id="topo">
             <div id="logo">
-                <a href="./index.php"><img id="banner" src="banner.png"></a>
+                <a href="./index.php"><img id="banner" src="./images/banner.png" alt="" title=""></a>
             </div>
             <div id="search">
                 
