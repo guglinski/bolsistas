@@ -5,6 +5,8 @@ import org.junit.runners.Suite;
    JunitTest1.class,
    JunitTest2.class,
    JunitTest3.class
+        
+        //check
 })
 public class JunitTestSuite {   
 }
