@@ -4,7 +4,7 @@ import org.junit.Test;
 public class JunitTest1 {
 
    FirstDayAtSchool school = new FirstDayAtSchool();
-   String[] bag = {"Books", "Notebooks", "Pens"};
+   String[] bag = {"Books", "Notebooks","Pens"};
 
    @Test
    public void testPrepareMyBag() {	

@@ -16,4 +16,13 @@ public class FirstDayAtSchool {
 
     }
     
+    public long addition() {
+        long numb1 = 5;
+        long numb2 = 7;
+        long result = numb1 + numb2;
+        System.out.println("The numbers to sum are: "+numb1+ " and "+numb2+". And the sum is: " +result);
+        return result;
+
+    }
+    
 }
