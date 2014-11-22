@@ -29,20 +29,20 @@
                     
                     if ($page == "" || $page == "home") {
                     	//include "./index.php";
-                    } else if ($page == "bolsitas") {
-                        include "./bolsistas.php";
+                    }else if ($page == "bolsitas") {
+                        include "./user/bolsistas.php";
                     } else if ($page == "projetos") {
-                        include "./projetos.php";
+                        include "./projetos/projetos.php";
                     } else if ($page == "contato") {
-                        include "./contato.php";
+                        include "./others/contato.php";
                     } else if ($page == "esqueceuSenha") {
-                        include "./esqueceuSenha.php";    
+                        include "./others/esqueceuSenha.php";    
 		    }else if($page == "cadastroBolsista"){
-                        include "./cadastro.php";    
+                        include "./user/cadastro.php";    
 		    }else if($page == "alterarDadosBolsista"){
-                        include "alterarDadosBolsista.php";    
+                        include "./user/alterarDadosBolsista.php";    
                     }else if($page == "editarBolsista"){
-                        include "editarBolsista.php";
+                        include "./user/editarBolsista.php";
                     }else if($page == "deletarBolsista"){
                         include "";
                     }
