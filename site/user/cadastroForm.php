@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include "./functions.php";
+include "../functions.php";
 
 $conn = conectar();
 
@@ -21,4 +21,4 @@ if ((isset($nomeBolsista) && ($nomeBolsista != "")) &&
     $conn->close();
 }
 
-header("Location: ./index.php?page=cadastroBolsista");
+header("Location: ../index.php?page=cadastroBolsista");

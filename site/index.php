@@ -38,28 +38,39 @@
                     $page = filter_input(INPUT_GET, "page");
                     
                     if ($page == "" || $page == "home") {
-                    	//include "./index.php";
-                    }else if ($page == "bolsitas") {
+                    	include "./index.php";
+                        
+                    } else if ($page == "bolsistas") {
                         include "./user/bolsistas.php";
+                        
                     } else if ($page == "projetos") {
                         include "./projetos/projetos.php";
+                        
                     } else if ($page == "contato") {
                         include "./others/contato.php";
+                        
                     } else if ($page == "esqueceuSenha") {
-                        include "./others/esqueceuSenha.php";    
-		    }else if($page == "cadastroBolsista"){
-                        include "./user/cadastro.php";    
-		    }else if($page == "alterarDadosBolsista"){
-                        include "./user/alterarDadosBolsista.php";    
-                    }else if($page == "editarBolsista"){
-                        include "./user/editarBolsista.php";
-                    }else if($page == "deletarBolsista"){
+                        include "./others/esqueceuSenha.php"; 
+                        
+		    } else if($page == "cadastro") {
+                        include "./user/cadastro.php";
+                        
+		    } else if($page == "alterarDadosBolsista") {
+                        include "./user/alterarDadosBolsista.php";
+                        
+                    } else if($page == "editarBolsista") {
+                        include "./user/editarUsuario.php";
+                        
+                    } else if($page == "deletarBolsista") {
                         include "";
-                    }else if($page == "editarProjeto"){
+                        
+                    }else if($page == "editarProjeto") {
                         include "./projetos/editarProjeto.php";
-                    }else if($page == "deletarProjeto"){
+                        
+                    }else if($page == "deletarProjeto") {
                         include "./projetos/removerProjetoForm.php";
-                    }else if($page == "cadastrarProjeto"){
+                        
+                    }else if($page == "cadastrarProjeto") {
                         include "./projetos/cadastroProjeto.php";
                     }
                 ?>
@@ -74,7 +85,7 @@
                 </form>
                 <div class="clear"></div>
                 <div class="invisibleSeparator"></div>
-                <div class="right"><a href="?page=cadastroBolsista">Cadastro<br></a></div>
+                <div class="right"><a href="?page=cadastro">Cadastro<br></a></div>
                 <div class="right"><a href="?page=alterarDadosBolsista">Alterar Dados<br></a></div>
             </div>
         </div>
