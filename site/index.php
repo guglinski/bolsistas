@@ -18,7 +18,17 @@
             <div id="menuNav">
                 <div class="linkMenu"><a href="?page=home">Home</a></div>
                 <div class="linkMenu"><a href="?page=bolsistas">Bolsista</a></div>
-                <div class="linkMenu"><a href="?page=projetos">Projeto</a></div>
+                <div class="linkMenu">
+                    <ul class="menuDrop">
+                        <li><a href="#">Projeto</a>
+                            <ul>
+                                <li><a href="?page=cadastrarProjeto">Cadastrar Projeto</a></li>
+                                <li><a href="?page=projetos">Projetos Ativos</a></li>
+                                <li><a href="?page=#">Adicionar Tarefas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
                 <div class="linkMenu"><a href="?page=contato">Contato</a></div>
             </div>
         </div>
@@ -45,6 +55,12 @@
                         include "./user/editarBolsista.php";
                     }else if($page == "deletarBolsista"){
                         include "";
+                    }else if($page == "editarProjeto"){
+                        include "./projetos/editarProjeto.php";
+                    }else if($page == "deletarProjeto"){
+                        include "./projetos/removerProjetoForm.php";
+                    }else if($page == "cadastrarProjeto"){
+                        include "./projetos/cadastroProjeto.php";
                     }
                 ?>
             </div>

@@ -17,3 +17,22 @@ function conectar() {
     
     return $conn;
 }
+
+
+function dateFormatBrazil($date) {
+    
+    $date = explode('-', $date);
+
+    $date = $date[2] . '/' . $date[1] . '/' . $date[0];
+    
+    return $date;
+}
+
+function dateFormatDB($date) {
+    
+    $date = explode('/', $date);
+
+    $date = $date[2] . '-' . $date[1] . '-' . $date[0];
+    
+    return $date;
+}

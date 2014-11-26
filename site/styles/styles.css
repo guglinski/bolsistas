@@ -173,3 +173,53 @@ input.smallItem, input.smallRightItem, input.item, input.largeItem {
     width: 90%;
     height: 10px;
 }
+
+
+.menuDrop{
+    list-style: none;
+    /*border: 1px solid #c0c0c0;*/
+    /*float: left;*/    
+}
+
+.menuDrop li a{
+    /*color: #0000FF;*/
+    text-decoration: none;
+    /*padding: 5px 10px;*/
+    display: block;
+}
+
+.menuDrop li a:hover{
+    background: #3399ff;
+    color: #f1f1f1;
+    -moz-box-shadow: 0 3px 10px 0 #808080;
+    -webkit-box-shadow: 0 3px 10px 0 #808080;
+    text-shadow: 0px 0px 5px #ff4800;
+    cursor: pointer;
+}
+
+.menuDrop li ul{
+    position: absolute;
+/*    top: 25px;
+    left: 0px; */
+    background-color: #808080;
+    display: none;
+}
+
+.menuDrop li:hover ul, .menuDrop li.over ul{
+    display: block;
+}
+
+.menuDrop li ul li{
+    border: 1px solid #c0c0c0;
+    display: block;
+    width: 100px;
+}
+
+.menuDrop li a:active{
+    background: #d3d3d3;
+    color: #ff0000;
+    -moz-box-shadow: 0 3px 10px 0 #808080;
+    -webkit-box-shadow: 0 3px 10px 0 #808080;
+    text-shadow: 0px 0px 5px #ff4800;
+    cursor: pointer;
+}
