@@ -1,7 +1,7 @@
-<h4>Gerenciamento de Bolsistas</h4>
+<h4>Gerenciamento de Usuários</h4>
 
-<form name="cadastroBolsista" action="./?page=bolsistas" method="POST" enctype="multipart/form-data">
-    Buscar (nome): <input type="text" name="nomeBolsista" value="">
+<form name="buscarUsuario" action="./?page=usuarios" method="POST" enctype="multipart/form-data">
+    Buscar (nome): <input type="text" name="nomeUsuario" value="">
     <input type="submit" value="Buscar" name="buscar" />
     <br><br>
 </form>
@@ -10,12 +10,12 @@
 include "functions.php";
 
 $conn = conectar();
-$nomeBolsista = filter_input(INPUT_POST, "nomeBolsista");
+$nomeUsuario = filter_input(INPUT_POST, "nomeUsuario");
 
-if (($nomeBolsista != "") && (isset($nomeBolsista))) {
-    $sql = "SELECT * FROM bolsista b WHERE b.nome LIKE '$nomeBolsista%' ORDER BY b.nome ";
+if (($nomeUsuario != "") && (isset($nomeUsuario))) {
+    $sql = "SELECT * FROM usuario u WHERE u.nome LIKE '$nomeUsuario%' ORDER BY b.nome ";
 } else {
-    $sql = "SELECT * FROM bolsista b ORDER BY b.nome";
+    $sql = "SELECT * FROM usuario u ORDER BY u.nome";
 }
 
 $result = $conn->query($sql);
@@ -27,6 +27,7 @@ echo '            <th>Nome</th>';
 echo '            <th>Salário</th>';
 echo '            <th>E-mail</th>';
 echo '            <th>Telefone</th>';
+echo '            <th>COORDENADOR?</th>';
 echo '            <th>Editar</th>';
 echo '            <th>Excluir</th>';
 echo '        </tr>';
@@ -41,13 +42,19 @@ if (($result != FALSE) && ($result->num_rows > 0)) {
         echo '    <td>' . $row["salario"] . '</td>';
         echo '    <td>' . $row["email"] . '</td>';
         echo '    <td>' . $row["telefone"] . '</td>';
+        if ($row["coordenador"]) {
+            echo '    <td>Sim</td>';
+        } else {
+            echo '    <td>Não</td>';
+        }
+        
         echo '    <td>';
-        echo '        <a href="?page=editarUsuario&id_bolsista=' . $row["id_bolsista"] . '">';
+        echo '        <a href="?page=editarUsuario&idUsuario=' . $row["id_usuario"] . '">';
         echo '            <button>Editar</button>';
         echo '        </a>';
         echo '    </td>';
         echo '    <td>';
-        echo '        <a href="?page=deletarBolsista&id_bolsista=' . $row["id_bolsista"] . '">';
+        echo '        <a href="?page=deletarUsuario&idUsuario=' . $row["id_usuario"] . '">';
         echo '            <button>Deletar</button>';
         echo '        </a>';
         echo '    </td>';

@@ -13,12 +13,15 @@ $coordenador = filter_input(INPUT_POST, 'coordenador');
 
 if (isset($nome) && ($nome != "")) {
     if (isset($coordenador) && $coordenador) {
-        $sql = "INSERT INTO coordenador (nome) VALUES ('$nome')";
+        $sql = "INSERT INTO usuario (nome, coordenador) VALUES ('$nome', 1)";
         
     } else if ((isset($salario) && $salario != "") && 
         (isset($telefone) && $telefone != "")  && 
         (isset($email) && $email != "")) {
-        $sql = "INSERT INTO bolsista (nome, salario, email, telefone) VALUES ('$nome','$salario','$email','$telefone')";
+        $sql = "INSERT INTO usuario (nome, salario, email, telefone, coordenador) VALUES ('$nome','$salario','$email','$telefone', 0)";
+    
+    } else {
+        // Tratamento de erros
     }
 }
 

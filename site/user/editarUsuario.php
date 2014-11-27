@@ -1,58 +1,62 @@
+<h4>Editar Usuário</h4>
 <?php
 include "functions.php";
 
 $conn = conectar();
-$id_bolsista = filter_input(INPUT_GET, 'id_bolsista');
+$idUsuario = filter_input(INPUT_GET, 'idUsuario');
 
-if ((!isset($id_bolsista)) && (!$id_bolsista != "")) {
-    header("Location: ../?page=bolsistas");
+if ((!isset($idUsuario)) && (!$idUsuario != "")) {
+    header("Location: ../?page=usuarios");
 }
 
-$sql = "SELECT * FROM bolsista b WHERE b.id_bolsista = '$id_bolsista'";         
+$sql = "SELECT * FROM usuario u WHERE u.id_usuario = $idUsuario";         
 $result = $conn->query($sql);
 
 if (($result == TRUE) && ($result->num_rows > 0)) {
     
     $row = $result->fetch_assoc();
     ?>
-<!--    <form name="alterarDados" action="editarUsuarioForm" method="POST" enctype="multipart/form-data">
-        : <br>
-        <input type="text" name="" value="" /><br>
-        <br>
-    </form>-->
-    <?php
-    echo '<form name="alterarDados" action="editarUsuarioForm" method="POST" enctype="multipart/form-data">';
-    echo '    Name: <input type="text" name="nome" value="" />';
-    echo '</form>';
-    
-    echo "<form name=\"formulario\" action=\"user/alterarDados.php\" method=\"POST\">
-                <table id=\"tabela_cadastro\">
-                    <tr>
-                            <td>Id:</td>
-                            <td><input type=\"text\" name=\"id_bolsista\" value=\"" . $row["id_bolsista"] . "\"><br></td>
-                    </tr>
-                    <tr>
-                            <td>Nome:</td>
-                            <td><input type=\"text\" name=\"nome\" value=\"" . $row["nome"] . "\"><br></td>
-                    </tr>
-                    <tr>
-                            <td>Salário: </td>
-                            <td><input type=\"text\" name=\"salario\" value=\"" . $row["salario"] . "\"></td>
-                    </tr>
-                    <tr>
-                            <td>Email: </td>
-                            <td><input type=\"text\" name=\"email\" value=\"" . $row["email"] . "\"></td>
-                    </tr>
-                    <tr>
-                            <td>Telefone: </td>
-                            <td><input type=\"text\" name=\"telefone\" value=\"" . $row["telefone"] . "\"></td>
-                    </tr>
-                    <tr>
-                            <td><input type=\"submit\" value=\"Enviar\"></td>
-                            <td><input type=\"reset\" value=\"Limpar\"></td>
-                    </tr>
-                    </table>
-                </form>";
+    <div id="boxCadastro">
+        <form name="formEditarUsuario" action="./user/editarUsuarioForm.php" method="POST" enctype="multipart/form-data">
+            
+            <input type="checkbox" id="coordenador" name="coordenador" value="teste" onchange="desabilitaCamposCadastro();" />
+            <label>Eu sou coordenador.</label>
+            <br>
+            <br>
+            
+            <label>Nome:</label><br>
+            <input type="text" id="nome" name="nome" value="<?php echo $row["nome"]; ?>" class="largeItem" /><br>
+            <br>
+
+            <div id="salarioBox">
+                <label>Salário:</label><br>
+                <input type="text" id="salario" name="salario" value="<?php echo $row["salario"]; ?>" class="largeItem" /><br>
+                <br>
+            </div>
+
+            <div id="emailBox">
+                <label>E-mail</label><br>
+                <input type="text" id="email" name="email" value="<?php echo $row["email"]; ?>" class="largeItem" /><br>
+                <br>
+            </div>
+
+            <div id="telefoneBox">
+                <label>Telefone:</label><br>
+                <input type="text" id="telefone" name="telefone" value="<?php echo $row["telefone"]; ?>" class="largeItem" /><br>
+                <br>
+            </div>
+            
+            <input type="hidden" name="idUsuario" value="<?php echo $idUsuario; ?>" />
+            <input type="submit" value="Cadastrar" name="editarUsuario" class="smallRightItem" />
+        </form>
+    </div>
+    <script><?php
+        if ($row["coordenador"]) {
+            echo 'var coordenador = document.getElementById("coordenador");';
+            echo 'coordenador.checked = true;';
+            echo 'desabilitaCamposCadastro();';
+        } ?>
+    </script><?php
 }
 
 $conn->close();

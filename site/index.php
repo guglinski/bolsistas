@@ -15,7 +15,7 @@
         <div id="menu">
             <div id="menuNav">
                 <div class="linkMenu"><a href="?page=home">Home</a></div>
-                <div class="linkMenu"><a href="?page=bolsistas">Bolsista</a></div>
+                <div class="linkMenu"><a href="?page=usuarios">Usuarios</a></div>
                 <div class="linkMenu">
                     <ul class="menuDrop">
                         <li><a href="#">Projeto</a>
@@ -38,26 +38,23 @@
                     if ($page == "" || $page == "home") {
                     	include "./home.php";
                         
-                    } else if ($page == "bolsistas") {
-                        include "./user/bolsistas.php";
-                        
-                    } else if ($page == "projetos") {
-                        include "./projetos/projetos.php";
-                        
-                    } else if ($page == "contato") {
-                        include "./others/contato.php";
-                        
-                    } else if ($page == "esqueceuSenha") {
-                        include "./others/esqueceuSenha.php"; 
-                        
 		    } else if($page == "cadastro") {
                         include "./user/cadastro.php";
+                        
+                    } else if ($page == "usuarios") {
+                        include "./user/usuarios.php";
                         
 		    } else if($page == "editarUsuario") {
                         include "./user/editarUsuario.php";
                         
-                    } else if($page == "deletarBolsista") {
+                    } else if($page == "deletarUsuario") {
                         include "./user/deletarUsuario.php";
+                        
+                    } else if($page == "cadastrarProjeto") {
+                        include "./projetos/cadastrarProjeto.php";
+                        
+                    } else if ($page == "projetos") {
+                        include "./projetos/projetos.php";
                         
                     } else if($page == "editarProjeto") {
                         include "./projetos/editarProjeto.php";
@@ -65,8 +62,11 @@
                     } else if($page == "deletarProjeto") {
                         include "./projetos/removerProjetoForm.php";
                         
-                    } else if($page == "cadastrarProjeto") {
-                        include "./projetos/cadastroProjeto.php";
+                    } else if ($page == "esqueceuSenha") {
+                        include "./others/esqueceuSenha.php"; 
+                        
+                    } else if ($page == "contato") {
+                        include "./others/contato.php";
                     }
                 ?>
             </div>
@@ -81,7 +81,6 @@
                 <div class="clear"></div>
                 <div class="invisibleSeparator"></div>
                 <div class="right"><a href="?page=cadastro">Cadastro<br></a></div>
-                <div class="right"><a href="?page=alterarDadosBolsista">Alterar Dados<br></a></div>
             </div>
         </div>
         

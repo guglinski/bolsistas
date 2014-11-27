@@ -1,4 +1,4 @@
-function desabilitaCamposCadastro(e) {
+function desabilitaCamposCadastro() {
     
     var coordenador = document.getElementById("coordenador");
     var salarioBox = document.getElementById("salarioBox");

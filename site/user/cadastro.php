@@ -1,7 +1,7 @@
 <h4>Cadastro</h4>
 
 <div id="boxCadastro">
-    <form name="cadastroBolsista" action="./user/cadastroForm.php" method="POST" enctype="multipart/form-data">
+    <form name="cadastroUsuario" action="./user/cadastroForm.php" method="POST" enctype="multipart/form-data">
         
         <input type="checkbox" id="coordenador" name="coordenador" value="teste" onchange="desabilitaCamposCadastro(this);" /> <label>Eu sou coordenador.</label>
         <br>
@@ -29,6 +29,6 @@
             <br>
         </div>
 
-        <input type="submit" value="Cadastrar" name="cadastrarBolsista" class="smallRightItem" />
+        <input type="submit" value="Cadastrar" name="bt_cadastrarUsuario" class="smallRightItem" />
     </form>
 </div>

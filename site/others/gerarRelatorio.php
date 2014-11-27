@@ -9,7 +9,7 @@
                 $database = "mydb";
 
                 
- $sql = "SELECT * FROM bolsista";
+ $sql = "SELECT * FROM usuario";
      
      
 $conn = new mysqli($host, $user, $password, $database);
@@ -41,7 +41,7 @@ $pdf->SetFont('Arial', '', 11);
 //Escrevendo no PDF os arquivos do banco
 while ($row = $result->fetch_assoc()) {
     
-    $pdf->Cell(90, 6, $row["id_bolsista"], 1);
+    $pdf->Cell(90, 6, $row["id_usuario"], 1);
     $pdf->Cell(90, 6, $row["nome"], 1);
     $pdf->Cell(90, 6, $row["salario"], 1);
     $pdf->Cell(90, 6, $row["email"], 1);
