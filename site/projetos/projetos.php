@@ -31,19 +31,19 @@ echo '    <tbody>';
 
 if (($result != FALSE) && ($result->num_rows > 0)) {
     while ($row = $result->fetch_assoc()) {
-        echo "<tr><td>" . $row["id_projeto"] . "</td>";
-        echo "<td>" . $row["nome"] . "</td>";
-        echo "<td>" . $row["data_inicio"] . "</td>";
-        echo "<td>" . $row["data_termino"] . "</td>";
-        echo '<td><a href="?page=editarProjeto&id_projeto=' . $row["id_projeto"] . '"><button>Editar</button></a></td>';
-        echo '<td><a href="?page=deletarProjeto&id_projeto=' . $row["id_projeto"] . '"><button>Deletar</button></a></td>';
-        echo "</tr>";
+        echo '<tr><td>' . $row["id_projeto"] . '</td>';
+        echo '<td>' . $row["nome"] . '</td>';
+        echo '<td>' . $row["data_inicio"] . '</td>';
+        echo '<td>' . $row["data_termino"] . '</td>';
+        echo '<td><a href="?page=editarProjeto&idProjeto=' . $row["id_projeto"] . '"><button>Editar</button></a></td>';
+        echo '<td><a href="?page=deletarProjeto&idProjeto=' . $row["id_projeto"] . '"><button>Deletar</button></a></td>';
+        echo '</tr>';
     }
 } else {
-    echo "0 results";
+    echo '0 results';
 }
 
-echo "    </tbody>";
-echo "</table>";
+echo '    </tbody>';
+echo '</table>';
 
 $conn->close();

@@ -63,7 +63,10 @@
                         include "./projetos/editarProjeto.php";
                         
                     } else if($page == "deletarProjeto") {
-                        include "./projetos/removerProjetoForm.php";
+                        include "./projetos/deletarProjeto.php";
+                        
+                    } else if ($page == "cadastroTarefa") {
+                        include "./tarefas/cadastroTarefa.php"; 
                         
                     } else if($page == "cadastrarProjeto") {
                         include "./projetos/cadastroProjeto.php";

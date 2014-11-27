@@ -1,5 +1,5 @@
 <div>
-    <form name="cadastroTarefa" action="./projetos/cadastroTarefaForm.php" method="POST" enctype="multipart/form-data">
+    <form name="cadastroTarefa" action="./tarefas/cadastroTarefaForm.php" method="POST" enctype="multipart/form-data">
         <table border="1">
             <thead>
                 <tr>
@@ -13,11 +13,11 @@
                     <td><input type="text" name="nomeTarefa"/></td>
                 </tr>
                 <tr>
-                    <td>Data de início</td>
+                    <td>Data de inÃ­cio</td>
                     <td><input type="date" name="dataInicio" value="" /></td>
                 </tr>   
                 <tr>
-                    <td>Data de término</td>
+                    <td>Data de tÃ©rmino</td>
                     <td><input type="date" name="dataTermino" value="" /></td>
                 </tr>
                 <tr>
