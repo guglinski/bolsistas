@@ -27,6 +27,6 @@ if ((isset($nome) && ($nome != "")) && (isset($dataInicio) && $dataInicio != "")
         
     $conn->close();
     
-    header("Location: /site/index.php?page=projetos");
+    header("Location: ./?page=projetos");
 } 
 ?>

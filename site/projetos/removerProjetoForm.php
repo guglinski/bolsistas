@@ -21,6 +21,6 @@ if(isset($id_projeto) && $id_projeto != ""){
         
     $conn->close();
     
-    header("Location: /site/index.php?page=projetos");
+    header("Location: ./?page=projetos");
 }
 ?>

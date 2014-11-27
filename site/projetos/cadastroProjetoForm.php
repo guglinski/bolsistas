@@ -25,7 +25,7 @@ if((isset($nomeProjeto) && $nomeProjeto != "") && (isset($dataInicio) && $dataIn
         
     $conn->close();
     
-    header("Location: /site/index.php?page=cadastrarProjeto");
+    header("Location: ./?page=cadastrarProjeto");
 }
 ?>
 

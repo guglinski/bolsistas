@@ -5,7 +5,7 @@ $conn = conectar();
 $id_bolsista = filter_input(INPUT_GET, 'id_bolsista');
 
 if ((!isset($id_bolsista)) && (!$id_bolsista != "")) {
-    header("Location: ../index.php?page=cadastroBolsista");
+    header("Location: ../?page=bolsistas");
 }
 
 $sql = "SELECT * FROM bolsista b WHERE b.id_bolsista = '$id_bolsista'";         
@@ -14,7 +14,13 @@ $result = $conn->query($sql);
 if (($result == TRUE) && ($result->num_rows > 0)) {
     
     $row = $result->fetch_assoc();
-    
+    ?>
+<!--    <form name="alterarDados" action="editarUsuarioForm" method="POST" enctype="multipart/form-data">
+        : <br>
+        <input type="text" name="" value="" /><br>
+        <br>
+    </form>-->
+    <?php
     echo '<form name="alterarDados" action="editarUsuarioForm" method="POST" enctype="multipart/form-data">';
     echo '    Name: <input type="text" name="nome" value="" />';
     echo '</form>';

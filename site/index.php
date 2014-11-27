@@ -3,15 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+        <script src="scripts.js"></script>
         <title>Trainee Manager</title>
     </head>
     <body>
         <div id="topo">
             <div id="logo">
-                <a href="./index.php"><img id="banner" src="./images/banner.png" alt="" title=""></a>
-            </div>
-            <div id="search">
-                
+                <a href="./?page=home"><img id="banner" src="./images/banner.png" alt="" title=""></a>
             </div>
         </div>
         <div id="menu">
@@ -38,7 +36,7 @@
                     $page = filter_input(INPUT_GET, "page");
                     
                     if ($page == "" || $page == "home") {
-                    	include "./index.php";
+                    	include "./home.php";
                         
                     } else if ($page == "bolsistas") {
                         include "./user/bolsistas.php";
@@ -55,22 +53,19 @@
 		    } else if($page == "cadastro") {
                         include "./user/cadastro.php";
                         
-		    } else if($page == "alterarDadosBolsista") {
-                        include "./user/alterarDadosBolsista.php";
-                        
-                    } else if($page == "editarBolsista") {
+		    } else if($page == "editarUsuario") {
                         include "./user/editarUsuario.php";
                         
                     } else if($page == "deletarBolsista") {
-                        include "";
+                        include "./user/deletarUsuario.php";
                         
-                    }else if($page == "editarProjeto") {
+                    } else if($page == "editarProjeto") {
                         include "./projetos/editarProjeto.php";
                         
-                    }else if($page == "deletarProjeto") {
+                    } else if($page == "deletarProjeto") {
                         include "./projetos/removerProjetoForm.php";
                         
-                    }else if($page == "cadastrarProjeto") {
+                    } else if($page == "cadastrarProjeto") {
                         include "./projetos/cadastroProjeto.php";
                     }
                 ?>
@@ -89,11 +84,11 @@
                 <div class="right"><a href="?page=alterarDadosBolsista">Alterar Dados<br></a></div>
             </div>
         </div>
-        <div id="line">
-            
-        </div>
+        
+        <div id="line"></div>
+        <div class="clear"></div>
         <div id="footer">
-            
+            ...
         </div>
     </body>
 </html>

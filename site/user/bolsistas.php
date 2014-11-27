@@ -1,8 +1,9 @@
-<h4>Bolsistas</h4>
+<h4>Gerenciamento de Bolsistas</h4>
 
 <form name="cadastroBolsista" action="./?page=bolsistas" method="POST" enctype="multipart/form-data">
-    Nome: <input type="text" name="nomeBolsista" value="">
+    Buscar (nome): <input type="text" name="nomeBolsista" value="">
     <input type="submit" value="Buscar" name="buscar" />
+    <br><br>
 </form>
 
 <?php
@@ -12,9 +13,9 @@ $conn = conectar();
 $nomeBolsista = filter_input(INPUT_POST, "nomeBolsista");
 
 if (($nomeBolsista != "") && (isset($nomeBolsista))) {
-    $sql = "SELECT * FROM bolsista b WHERE b.nome LIKE '$nomeBolsista%' ORDER BY b.id_bolsista ";
+    $sql = "SELECT * FROM bolsista b WHERE b.nome LIKE '$nomeBolsista%' ORDER BY b.nome ";
 } else {
-    $sql = "SELECT * FROM bolsista b ORDER BY b.id_bolsista";
+    $sql = "SELECT * FROM bolsista b ORDER BY b.nome";
 }
 
 $result = $conn->query($sql);
@@ -41,7 +42,7 @@ if (($result != FALSE) && ($result->num_rows > 0)) {
         echo '    <td>' . $row["email"] . '</td>';
         echo '    <td>' . $row["telefone"] . '</td>';
         echo '    <td>';
-        echo '        <a href="?page=editarBolsista&id_bolsista=' . $row["id_bolsista"] . '">';
+        echo '        <a href="?page=editarUsuario&id_bolsista=' . $row["id_bolsista"] . '">';
         echo '            <button>Editar</button>';
         echo '        </a>';
         echo '    </td>';

@@ -31,6 +31,6 @@ if ((isset($nome) && ($nome != "")) && (isset($salarioBolsista) && $salarioBolsi
         
     $conn->close();
     
-    header("Location: /site/index.php?page=alterarDadosBolsista");
+    header("Location: ./?page=alterarDadosBolsista");
 }
 ?>
