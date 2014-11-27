@@ -1,53 +1,44 @@
-<div>
-    <?php
+<h4>Editar Projeto</h4>
+<?php
+
+include "./functions.php";
+
+$idProjeto = filter_input(INPUT_GET, "idProjeto");
+
+if ((isset($idProjeto)) && ($idProjeto != "")) {
     
-    include "functions.php";
+    $conn = conectar();
     
-    $id_projeto = filter_input(INPUT_GET, 'id_projeto');
+    $sql = "SELECT * FROM projeto p WHERE p.id_projeto = '$idProjeto'";         
+    $result = $conn->query($sql);
+    
+    if (($result == TRUE) && ($result->num_rows > 0)) {
+        
+        $row = $result->fetch_assoc();
+        ?>
+        <div id="boxCadastro">
+            <form name="formulario" action="./projetos/alterarDadosForm.php" method="POST">
+                
+                Nome do projeto: <br>
+                <input type="text" name="nomeProjeto" value="<?php echo $row["nome"]; ?>" class="largeItem" /><br>
+                <br>
 
-    if ((isset($id_projeto)) && ($id_projeto != "")) {
-        $sql = "SELECT * FROM projeto p WHERE p.id_projeto = '$id_projeto'";         
+                Data de início: <br>
+                <input type="text" name="dataInicio" value="<?php echo $row["data_inicio"]; ?>" class="largeItem" /><br>
+                <br>
 
-        $conn = conectar();
+                Data de término: <br>
+                <input type="text" name="dataTermino" value="<?php echo $row["data_termino"]; ?>" class="largeItem" /><br>
+                <br>
 
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
-
-        $result = $conn->query($sql);
-
-        if (($result == TRUE) && ($result->num_rows > 0)) {
-            
-            $row = $result->fetch_assoc();
-
-            echo '<form name="formulario" action="./projetos/alterarDadosForm.php" method="POST">
-						<table id="tabela_cadastro">
-							<tr>
-								<td>Id:</td>
-								<td><input type="text" name="id_projeto" value="' . $row["id_projeto"] . '"><br></td>
-							</tr>
-							<tr>
-								<td>Nome:</td>
-								<td><input type="text" name="nome" value="' . $row["nome"] . '"><br></td>
-							</tr>
-							<tr>
-								<td>Data de início: </td>
-								<td><input type="text" name="dataInicio" value="' . dateFormatBrazil($row["data_inicio"]) . '"></td>
-							</tr>
-							<tr>
-								<td>Data de término: </td>
-								<td><input type="text" name="dataTermino" value="' . dateFormatBrazil($row["data_termino"]) . '"></td>
-							</tr>
-							<tr>
-								<td><input type="submit" value="Enviar"></td>
-								<td><input type="reset" value="Limpar"></td>
-							</tr>
-							</table>
-                                      </form>';
-        }
-
-        $conn->close();
+                <input type="submit" value="Cadastrar" name="cadastrar" class="smallRightItem" />
+            </form>
+        </div><?php
     }
-    ?>
-</div>
+    
+    $conn->close();
+    header("Location: ../?page=projetos");
+    
+} else {
+    header("Location: ../?page=projetos&erro=1");
+}
