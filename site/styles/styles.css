@@ -14,18 +14,15 @@ thead, tr, th, td {
     vertical-align: baseline;
     background: none repeat scroll 0% 0% transparent;
 }
-
 div {
     display: block;
     background-size: 100% 100%;
     text-align: justify;
 }
-
 p {
     margin-top: 7px;
     margin-bottom: 7px;
 }
-
 body {
     font-family: Verdana, Helvetica, Arial;
     color: #404040;
@@ -35,7 +32,6 @@ body {
     line-height: 17px;
     unicode-bidi: embed;
 }
-
 #topo {
     width: 980px;
     height: 60px;
@@ -43,30 +39,31 @@ body {
     margin-right: auto;
     background-color: #f1f1f1;
 }
-
 #logo {
     
 }
-
 #banner {
     width: 500px;
     height: 50px;
     padding-top: 10px;
 }
-
+#img_home{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    float: right;
+}
 #menu {
     height: 30px;
     word-spacing: 12px;
     background-color: #717171;
     color: #f1f1f1 !important;
 }
-
 #menuNav {
     width: 980px;
     margin-left: auto;
     margin-right: auto; 
 }
-
 .linkMenu {
     position: relative;
     float: left;
@@ -75,7 +72,6 @@ body {
     vertical-align: 50%;
     margin-right: 20px;
 }
-
 #bigBox {
     width: 1000px;
     margin-left: auto;
@@ -83,11 +79,10 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
 #content {
     width: 740px;
     min-height: 400px;
-    background-color: #ffffff;
+    background-color: #f1f1f1;
     clear: none;
     float: left;
     padding-top: 10px;
@@ -96,7 +91,6 @@ body {
     padding-left: 15px;
     word-wrap: break-word;
 }
-
 #login {
     position: relative;
     float: right;
@@ -106,7 +100,6 @@ body {
     color: #f1f1f1;
     padding: 10px;
 }
-
 #line {
     position: relative;
     float: left;
@@ -115,7 +108,6 @@ body {
     background-color: #707070;
     margin-top: 10px;
 }
-
 #footer {
     width: 1000px;
     height: 50px;
@@ -124,7 +116,6 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-
 h4 {
     font-size: 16px;
     font-weight: normal;
@@ -133,84 +124,67 @@ h4 {
     margin-bottom: 10px;
     border-bottom: 1px solid #ebebeb;
 }
-
 a {
     cursor: auto;
 }
-
 a:link, a:visited {
     color: #3b5998;
     cursor: pointer;
     text-decoration: none;
     font-weight: bold;
 }
-
 a:hover, a:active {
     color: #3b5998;
     text-decoration: underline;
 }
-
 a.topnavdir {
     float: right;
     margin-left: 10px;
     margin-right: 6px;
 }
-
 .linkMenu a:link, .linkMenu a:visited {
     color: #f1f1f1;
 }
-
 input.smallItem, input.smallRightItem, input.item, input.largeItem {
     height: 21px;
 }
-
 .smallItem {
     width: 96px;
     height: 30px !important;
 }
-
 .smallRightItem {
     width: 96px;
     height: 30px !important;
     position: relative;
     float: right;
 }
-
 .item {
     width: 196px;
 }
-
 .largeItem {
     width: 246px;
 }
-
 .right {
     text-align: right;
 }
-
 .clear {
     clear: both;
 }
-
 .invisibleSeparator {
     width: 90%;
     height: 10px;
 }
-
-
 .menuDrop{
     list-style: none;
     /*border: 1px solid #c0c0c0;*/
     /*float: left;*/    
 }
-
 .menuDrop li a{
     /*color: #0000FF;*/
     text-decoration: none;
     /*padding: 5px 10px;*/
     display: block;
 }
-
 .menuDrop li a:hover{
     background: #3399ff;
     color: #f1f1f1;
@@ -219,7 +193,6 @@ input.smallItem, input.smallRightItem, input.item, input.largeItem {
     text-shadow: 0px 0px 5px #ff4800;
     cursor: pointer;
 }
-
 .menuDrop li ul{
     position: absolute;
 /*    top: 25px;
@@ -227,17 +200,14 @@ input.smallItem, input.smallRightItem, input.item, input.largeItem {
     background-color: #808080;
     display: none;
 }
-
 .menuDrop li:hover ul, .menuDrop li.over ul{
     display: block;
 }
-
 .menuDrop li ul li{
     border: 1px solid #c0c0c0;
     display: block;
     width: 100px;
 }
-
 .menuDrop li a:active{
     background: #d3d3d3;
     color: #ff0000;
@@ -246,9 +216,20 @@ input.smallItem, input.smallRightItem, input.item, input.largeItem {
     text-shadow: 0px 0px 5px #ff4800;
     cursor: pointer;
 }
-
 #boxCadastro {
     width: 250px;
     margin-left: auto;
     margin-right: auto;
+}
+#texto_home{
+    width: 400px;
+    position: relative;
+    float: left;
+}
+#paragrafoDois_home{
+    position: relative;
+    float: left;
+}
+#texto_footer{
+    margin: 5px;
 }

@@ -15,7 +15,7 @@
         <div id="menu">
             <div id="menuNav">
                 <div class="linkMenu"><a href="?page=home">Home</a></div>
-                <div class="linkMenu"><a href="?page=usuarios">Usuarios</a></div>
+                <div class="linkMenu"><a href="?page=bolsistas">Bolsista</a></div>
                 <div class="linkMenu">
                     <ul class="menuDrop">
                         <li><a href="#">Projeto</a>
@@ -38,23 +38,26 @@
                     if ($page == "" || $page == "home") {
                     	include "./home.php";
                         
+                    } else if ($page == "bolsistas") {
+                        include "./user/bolsistas.php";
+                        
+                    } else if ($page == "projetos") {
+                        include "./projetos/projetos.php";
+                        
+                    } else if ($page == "contato") {
+                        include "./others/contato.php";
+                        
+                    } else if ($page == "esqueceuSenha") {
+                        include "./others/esqueceuSenha.php"; 
+                        
 		    } else if($page == "cadastro") {
                         include "./user/cadastro.php";
-                        
-                    } else if ($page == "usuarios") {
-                        include "./user/usuarios.php";
                         
 		    } else if($page == "editarUsuario") {
                         include "./user/editarUsuario.php";
                         
-                    } else if($page == "deletarUsuario") {
+                    } else if($page == "deletarBolsista") {
                         include "./user/deletarUsuario.php";
-                        
-                    } else if($page == "cadastrarProjeto") {
-                        include "./projetos/cadastrarProjeto.php";
-                        
-                    } else if ($page == "projetos") {
-                        include "./projetos/projetos.php";
                         
                     } else if($page == "editarProjeto") {
                         include "./projetos/editarProjeto.php";
@@ -62,11 +65,8 @@
                     } else if($page == "deletarProjeto") {
                         include "./projetos/removerProjetoForm.php";
                         
-                    } else if ($page == "esqueceuSenha") {
-                        include "./others/esqueceuSenha.php"; 
-                        
-                    } else if ($page == "contato") {
-                        include "./others/contato.php";
+                    } else if($page == "cadastrarProjeto") {
+                        include "./projetos/cadastroProjeto.php";
                     }
                 ?>
             </div>
@@ -81,13 +81,18 @@
                 <div class="clear"></div>
                 <div class="invisibleSeparator"></div>
                 <div class="right"><a href="?page=cadastro">Cadastro<br></a></div>
+                <div class="right"><a href="?page=alterarDadosBolsista">Alterar Dados<br></a></div>
             </div>
         </div>
         
         <div id="line"></div>
         <div class="clear"></div>
         <div id="footer">
-            ...
+            <p id="texto_footer">
+            Equipe de Desenvolvimento <br>
+            Dimitri Free: freeBoy@bol.com &nbsp&nbsp&nbsp&nbsp Thiago Madeira: madeira@ice.ufjf.br <br>
+            Igor Fabri: &nbsp&nbsp&nbsp&nbsp Victor Reis:
+            </p>
         </div>
     </body>
 </html>
